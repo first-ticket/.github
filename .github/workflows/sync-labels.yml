@@ -1,0 +1,48 @@
+name: Sync Labels to All Repos
+
+on:
+  push:
+    branches:
+      - main                          # main 브랜치에 push될 때 트리거
+    paths:
+      - 'labels.json'                 # labels.json이 변경될 때만 실행 (불필요한 실행 방지)
+  workflow_dispatch:                  # GitHub UI에서 수동 실행도 가능하게
+
+jobs:
+  sync-labels:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. 현재 repo(.github)를 체크아웃 → labels.json을 가져오기 위함
+      - name: Checkout .github repo
+        uses: actions/checkout@v4
+
+      # 2. Node.js 설치 → github-label-sync는 npm 패키지이기 때문
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # 3. github-label-sync 전역 설치
+      - name: Install github-label-sync
+        run: npm install -g github-label-sync
+
+      # 4. Organization 내 모든 repo 목록을 가져와 순회하며 sync 실행
+      - name: Sync labels to all repos
+        env:
+          GH_TOKEN: ${{ secrets.LABEL_SYNC_TOKEN }}  # PAT를 Secret으로 관리
+          ORG: first-ticket                           # Organization 이름
+        run: |
+          # gh CLI로 org의 모든 repo 이름 목록 취득
+          repos=$(gh repo list $ORG --limit 100 --json name --jq '.[].name')
+          
+          for repo in $repos; do
+            echo "Syncing: $ORG/$repo"
+            
+            github-label-sync \
+              --access-token "$GH_TOKEN" \
+              --labels labels.json \
+              "$ORG/$repo"
+              
+            echo "Done: $ORG/$repo"
+          done
