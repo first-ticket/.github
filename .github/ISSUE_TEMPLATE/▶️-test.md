@@ -1,10 +1,9 @@
 ---
 name: "▶️ test"
 about: 테스트 코드 작성
-title: "[test][서비스명]"
-labels: fix
+title: "[test][서비스명] "
+labels: test
 assignees: ''
-
 ---
 
 ## 📌 개요
