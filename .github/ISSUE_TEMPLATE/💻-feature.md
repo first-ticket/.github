@@ -2,7 +2,7 @@
 name: "💻 feature"
 about: 새로운 기능 개발
 title: "[feat][서비스명] "
-labels: feat
+labels: 💻 feature
 assignees: ''
 ---
 
