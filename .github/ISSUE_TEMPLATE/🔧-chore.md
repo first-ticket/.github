@@ -2,7 +2,7 @@
 name: "\U0001F527 chore"
 about: "(코드의 수정 없이) 그 외 기타 수정"
 title: "[chore][서비스명]"
-labels: chore
+labels: 🔧 chore
 assignees: ''
 
 ---
