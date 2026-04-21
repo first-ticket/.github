@@ -62,8 +62,8 @@
 | `📜 documentation` | 문서 작업 |
 | `▶️ test` | 테스트 코드 추가/수정 |
 
-> 새 서비스 레포 생성 시 위 라벨을 수동으로 등록해야 합니다.
-> **Issues → Labels → New label** 에서 추가.
+> 새 서비스 레포 생성 후 Action에서 Sync Labels to All Repos Workflow를 실행하면 해당 레포와 라벨이 동기화됩니다. </br>
+> 라벨 동기화 액션 링크 : https://github.com/first-ticket/.github/actions
 
 ---
 
