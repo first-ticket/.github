@@ -8,7 +8,7 @@ about: 코드 리팩토링
 title: "[refactor][서비스명] "
 # 이슈 생성 시 자동으로 붙는 라벨
 # 라벨이 GitHub에 미리 등록되어 있어야 적용됨
-labels: refactor
+labels: ♻️ refactor
 # 이슈 생성 시 자동으로 지정되는 담당자
 # 비워두면 작성자가 직접 지정
 assignees: ''
