@@ -1,0 +1,13 @@
+# .github/ISSUE_TEMPLATE/config.yml
+
+# true: 템플릿 없이 빈 이슈 생성 차단 - 템플릿 우회 방지
+blank_issues_enabled: false
+
+contact_links:
+  - name: 📄 팀 노션 (S.A 문서 · 설계 명세)
+    url: https://www.notion.so/teamsparta/First-Class-3432dc3ef51480ffb998d7c80d204117?source=copy_link
+    about: API 명세서, ERD, 아키텍처 설계 문서는 여기서 확인하세요.
+
+  - name: 💬 팀 Slack
+    url: https://firstclass-qje2044.slack.com
+    about: 타 서비스에 영향을 주는 변경은 Slack에서 먼저 공유해주세요.
