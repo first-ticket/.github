@@ -8,6 +8,8 @@
 ## 📁 디렉토리 구조
 
 ```
+## first-ticket Organization/.github repository 내부 구조
+
 .github/
 ├── PULL_REQUEST_TEMPLATE.md     # PR 생성 시 자동 적용되는 템플릿
 └── ISSUE_TEMPLATE/
@@ -24,6 +26,8 @@
 ## 🚀 사용 방법
 
 별도 설정 없이 **이슈 또는 PR을 생성하면 자동으로 적용**됩니다.
+
+⚠️ 주의 : 각 Microservice 안에 템플릿을 생성하면 공통 설정이 적용되지 않을 수 있습니다. 관련 문제 있을시 담당자에게 문의 바랍니다.
 
 ### 이슈 생성
 
