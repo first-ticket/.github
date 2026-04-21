@@ -2,7 +2,7 @@
 name: "\U0001F4DC documentation"
 about: 문서화 작업
 title: "[documentation][서비스명]"
-labels: documentation
+labels: 📜 documentation
 assignees: ''
 
 ---
