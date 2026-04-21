@@ -2,7 +2,7 @@
 name: "🛠️ fix"
 about: 버그 수정, 기능 수정
 title: "[fix][서비스명] "
-labels: fix
+labels: 🛠️ fix
 assignees: ''
 ---
 
