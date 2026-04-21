@@ -1,31 +1,31 @@
 [
   {
-    "name": "test",
+    "name": "▶️ test",
     "color": "6b93d1",
     "description": "테스트 코드"
   },
   {
-    "name": "refactor",
+    "name": "♻️ refactor",
     "color": "2b8c42",
     "description": "코드 리팩토링"
   },
   {
-    "name": "feature",
+    "name": "💻 feature",
     "color": "085691",
     "description": "새로운 기능 개발"
   },
   {
-    "name": "documentation",
+    "name": "📜 documentation",
     "color": "7b522e",
     "description": "문서화 작업"
   },
   {
-    "name": "chore",
+    "name": "🔧 chore",
     "color": "856353",
     "description": "기타 수정"
   },
   {
-    "name": "fix",
+    "name": "🛠️ fix",
     "color": "143dd3",
     "description": "버그 수정 및 핫픽스"
   }
