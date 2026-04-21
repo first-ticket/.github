@@ -2,7 +2,7 @@
 name: "▶️ test"
 about: 테스트 코드 작성
 title: "[test][서비스명] "
-labels: test
+labels: ▶️ test
 assignees: ''
 ---
 
