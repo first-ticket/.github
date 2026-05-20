@@ -42,6 +42,13 @@ First Ticket은 **매크로 없이, 정각 접속자 모두가 동등하게 경�
 
 ## 🎯 주요 기능
 
+- 🎭 **공연 조회 및 예매** — 다양한 공연·전시 프로그램을 검색하고, 좌석을 직접 선택하여 예매
+- 🎟️ **대기열 입장** — 티켓 오픈 직후 폭주 상황에서도 매크로 없이 정각 접속자가 동등하게 순번을 부여받고 입장
+- 💺 **좌석 선점** — 마음에 드는 좌석을 일정 시간 동안 임시로 선점하고, 그 안에 결제를 완료해 예매 확정
+- 💳 **간편 결제** — Toss Payments로 안전하게 결제, 결제 실패·취소 시에도 좌석과 예매가 자동으로 복원
+- 🔄 **예매 취소 및 환불** — 예매 취소 요청 시 결제 환불부터 좌석 복구까지 자동으로 처리
+- 🎤 **공연 등록 (주최자)** — 주최자가 공연장·스케줄·가격등급을 등록하고 판매 시작 시점 제어
+
 ## 🏛️ 설계 원칙
 
 | 영역 | 적용 방식 |
@@ -107,47 +114,21 @@ First Ticket은 **매크로 없이, 정각 접속자 모두가 동등하게 경�
 
 ## 🛠️ 기술 스택
 
-#### Language & Framework
-![Java](https://img.shields.io/badge/Java-21-007396?style=flat-square&logo=openjdk)
-![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.5.13-6DB33F?style=flat-square&logo=springboot)
-![Spring Cloud](https://img.shields.io/badge/Spring_Cloud-2025.0.2-6DB33F?style=flat-square&logo=spring)
-![Spring Data JPA](https://img.shields.io/badge/Spring_Data_JPA-6DB33F?style=flat-square&logo=spring)
-![QueryDSL](https://img.shields.io/badge/QueryDSL-0769AD?style=flat-square)
-![Keycloak](https://img.shields.io/badge/Keycloak-26-4D4D4D?style=flat-square&logo=keycloak)
-![Resilience4j](https://img.shields.io/badge/Resilience4j-2B7CD3?style=flat-square)
-![Flyway](https://img.shields.io/badge/Flyway-CC0200?style=flat-square&logo=flyway)
-
-#### Database & Messaging
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
-![Kafka](https://img.shields.io/badge/Kafka_(KRaft)-231F20?style=flat-square&logo=apachekafka)
-![Toss Payments](https://img.shields.io/badge/Toss_PG-0064FF?style=flat-square&logo=tossPayments)
-
-#### Test
-![JUnit5](https://img.shields.io/badge/JUnit_5-25A162?style=flat-square&logo=junit5)
-![nGrinder](https://img.shields.io/badge/nGrinder-2B82BD?style=flat-square)
-![k6](https://img.shields.io/badge/k6-7D64FF?style=flat-square&logo=k6)
-![JMeter](https://img.shields.io/badge/JMeter-D22128?style=flat-square&logo=apache)
-![Testcontainers](https://img.shields.io/badge/Testcontainers-2496ED?style=flat-square&logo=docker)
-
-#### Infra & DevOps
-![AWS ECS](https://img.shields.io/badge/AWS_ECS_Fargate-FF9900?style=flat-square&logo=amazonaws)
-![AWS RDS](https://img.shields.io/badge/AWS_RDS-527FFF?style=flat-square&logo=amazonrds)
-![AWS ALB](https://img.shields.io/badge/AWS_ALB-FF9900?style=flat-square&logo=amazonaws)
-![AWS ECR](https://img.shields.io/badge/AWS_ECR-FF9900?style=flat-square&logo=amazonaws)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
-
-#### Monitoring
-![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=flat-square&logo=prometheus)
-![Grafana](https://img.shields.io/badge/Grafana-F46800?style=flat-square&logo=grafana)
-![Zipkin](https://img.shields.io/badge/Zipkin-FF6B6B?style=flat-square)
-
-#### Collaboration
-![Notion](https://img.shields.io/badge/Notion-000000?style=flat-square&logo=notion)
-![Slack](https://img.shields.io/badge/Slack-4A154B?style=flat-square&logo=slack)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github)
-![drawio](https://img.shields.io/badge/draw.io-F08705?style=flat-square&logo=diagrams.net)
+| 영역 | 기술 |
+|---|---|
+| **Language** | Java 21 |
+| **Framework** | Spring Boot 3.5.13 · Spring Cloud 2025.0.2 · Spring Data JPA · QueryDSL |
+| **인증 · 보안** | Keycloak 26 · JWT |
+| **장애 격리** | Resilience4j (Circuit Breaker · Bulkhead) |
+| **Database** | PostgreSQL · Redis · Redisson |
+| **DB Migration** | Flyway |
+| **Messaging** | Apache Kafka |
+| **External API** | Toss Payments |
+| **Test** | JUnit 5 · Testcontainers · nGrinder · k6 · JMeter |
+| **Infra** | AWS ECS Fargate · AWS EC2 · AWS RDS · AWS ALB · AWS ECR |
+| **CI / CD** | Docker · GitHub Actions |
+| **Monitoring** | Prometheus · Grafana · Zipkin |
+| **Collaboration** | Notion · Slack · GitHub · draw.io |
 
 ---
 
